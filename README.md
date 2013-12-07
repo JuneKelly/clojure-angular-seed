@@ -1,6 +1,6 @@
 # clojure-angular-seed
 
-FIXME
+A seed project for getting started fast with Clojure and AngularJS.
 
 ## Prerequisites
 
