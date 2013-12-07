@@ -5,6 +5,7 @@
 
 (defonce server (atom nil))
 
+
 (defn get-handler []
   ;; #'app expands to (var app) so that when we reload our code,
   ;; the server is forced to re-resolve the symbol in the var
@@ -15,6 +16,7 @@
     (wrap-file "resources")
     ; Content-Type, Content-Length, and Last Modified headers for files in body
     (wrap-file-info)))
+
 
 (defn start-server
   "used for starting the server in development mode from REPL"
@@ -28,6 +30,7 @@
                     :destroy destroy
                     :join? false}))
     (println (str "You can view the site at http://localhost:" port))))
+
 
 (defn stop-server []
   (.stop @server)
