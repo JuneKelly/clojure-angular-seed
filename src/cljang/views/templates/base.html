@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>cljang</title>
+      {% style "vendor/sass-bootstrap/dist/css/bootstrap.min.css" type="text/css" %}
+      {% style "/css/main.css" %}
+    </head>
+
+    <body ng-app="cljangApp">
+
+      <div class="container" ng-view=""></div>
+
+      {% script "vendor/jquery/jquery.js" %}
+      {% script "vendor/angular/angular.js" %}
+      {% script "vendor/sass-bootstrap/dist/js/bootstrap.min.js" %}
+      {% script "vendor/angular-resource/angular-resource.js" %}
+      {% script "vendor/angular-cookies/angular-cookies.js" %}
+      {% script "vendor/angular-sanitize/angular-sanitize.js" %}
+      {% script "vendor/angular-route/angular-route.js" %}
+      {% script "vendor/jquery/jquery.min.js" %}
+      {% script "vendor/lodash/dist/lodash.min.js" %}
+
+      {% script "/js/app.js" %}
+      <script type="text/javascript">
+          var context = "{{servlet-context}}";
+      </script>
+    </body>
+</html>
+

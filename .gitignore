@@ -1,0 +1,14 @@
+/target
+/lib
+/classes
+/checkouts
+/node_modules
+pom.xml
+*.jar
+*.class
+/.lein-*
+/.env
+*.log
+resources/public
+resources/bower_components
+.sass-cache
