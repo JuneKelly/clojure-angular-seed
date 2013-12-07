@@ -1,4 +1,4 @@
-(ns clj-ang.test.handler
+(ns cljang.test.handler
   (:use clojure.test
         ring.mock.request
         clj-ang.handler))
