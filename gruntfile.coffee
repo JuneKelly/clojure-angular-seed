@@ -64,18 +64,24 @@ module.exports = (grunt) ->
           sassDir: "resources/styles"
           cssDir:  "resources/public/css"
 
-    concurrent:
-      server: [
-        "exec:server"
-        "watch"
-      ]
+    parallel:
+      server:
+        options:
+          stream: true
+        tasks: [{
+          grunt: true
+          args: 'exec:server'
+        }, {
+          grunt: true
+          args: 'watch'
+        }]
 
   grunt.loadNpmTasks "grunt-exec"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-newer"
-  grunt.loadNpmTasks "grunt-concurrent"
+  grunt.loadNpmTasks "grunt-parallel"
   grunt.loadNpmTasks "grunt-contrib-compass"
 
   grunt.registerTask "server", [
@@ -85,5 +91,5 @@ module.exports = (grunt) ->
     "copy:fonts"
     "copy:images"
     "coffee"
-    "concurrent:server"
+    "parallel:server"
   ]

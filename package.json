@@ -15,6 +15,7 @@
     "grunt-newer": "~0.6.0",
     "grunt-concurrent": "~0.4.2",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-compass": "~0.6.0"
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-parallel": "~0.3.1"
   }
 }
