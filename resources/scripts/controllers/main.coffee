@@ -1,12 +1,16 @@
 'use strict'
 
 angular.module('cljangApp')
-  .controller 'MainCtrl', ($scope) ->
-    $scope.niceThings = [
-      'Clojure',
-      'AngularJS',
-      'CoffeeScript',
-      'Sass',
-      'Grunt',
-      'Bower'
-    ]
+  .controller 'MainCtrl', ($scope, $http) ->
+    $scope.niceThings = []
+
+    loadNiceThings = () ->
+      $http(
+        method: 'GET'
+        url: '/api/nicethings'
+        headers: { 'Accept': 'application/json'}
+      )
+        .success (data) ->
+          $scope.niceThings = data.things
+
+    loadNiceThings()
