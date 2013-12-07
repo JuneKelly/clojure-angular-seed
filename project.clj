@@ -1,4 +1,4 @@
-(defproject clojure-angular-seed "0.1.0-SNAPSHOT"
+(defproject cljang "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
 
