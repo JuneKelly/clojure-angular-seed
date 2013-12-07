@@ -1,6 +1,7 @@
 (ns cljang.handler
   (:require [compojure.core :refer [defroutes]]
             [cljang.routes.home :refer [home-routes]]
+            [cljang.routes.api  :refer [api-routes]]
             [noir.util.middleware :as middleware]
             [compojure.route :as route]
             [taoensso.timbre :as timbre]
@@ -59,7 +60,7 @@
 
 (def app (middleware/app-handler
            ;; add your application routes here
-           [home-routes app-routes]
+           [home-routes api-routes app-routes]
            ;; add custom middleware here
            :middleware [template-error-page]
            ;; add access rules here
