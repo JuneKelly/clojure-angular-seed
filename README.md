@@ -12,8 +12,15 @@ You will need [Leiningen][1] 2.0 or above installed.
 
 To start a web server for the application, run:
 
-    lein ring server
+  $ npm install -g grunt-cli bower
+
+  $ npm install
+
+  $ bower install
+
+  $ grunt server
+
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013 Shane Kilkelly (MIT License)
