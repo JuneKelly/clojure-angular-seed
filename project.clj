@@ -11,7 +11,6 @@
                  [com.postspectacular/rotor "0.1.0"]
                  [com.taoensso/tower "2.0.1"]
                  [markdown-clj "0.9.35"]
-                 [com.novemberain/monger "1.5.0"]
                  [liberator "0.10.0"]
                  [environ "0.4.0"]]
 
