@@ -68,7 +68,7 @@ $ ./bin/bootstrap.sh
 
 Finally, to run the development server:
 ```
-$ grunt server:dev
+$ grunt server
 ```
 
 
