@@ -76,6 +76,13 @@ module.exports = (grunt) ->
           args: 'watch'
         }]
 
+    protractor:
+      manual:
+        options:
+          configFile: "./spec/config/protractor.conf.js"
+          keepAlive: false
+
+
   grunt.loadNpmTasks "grunt-exec"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-watch"
@@ -83,6 +90,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-newer"
   grunt.loadNpmTasks "grunt-parallel"
   grunt.loadNpmTasks "grunt-contrib-compass"
+  grunt.loadNpmTasks "grunt-protractor-runner"
 
   grunt.registerTask "server", [
     "compass"
@@ -92,4 +100,8 @@ module.exports = (grunt) ->
     "copy:images"
     "coffee"
     "parallel:server"
+  ]
+
+  grunt.registerTask "test:e2e", [
+    "protractor:manual"
   ]

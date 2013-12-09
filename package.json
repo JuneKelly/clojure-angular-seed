@@ -16,6 +16,9 @@
     "grunt-concurrent": "~0.4.2",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-compass": "~0.6.0",
-    "grunt-parallel": "~0.3.1"
+    "grunt-parallel": "~0.3.1",
+    "grunt-protractor-runner": "~0.2.0",
+    "protractor": "~0.14.0",
+    "coffee-script": "~1.6.3"
   }
 }
