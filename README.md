@@ -58,17 +58,17 @@ $ gem install sass
 ```
 
 
-Then install npm and bower packages:
+Then run the bootstrapper script, which will install npm and bower
+packages, and also install the webdriver binaries needed to run the
+protractor tests:
 ```
-$ npm install
-
-$ bower install
+$ ./bin/bootstrap.sh
 ```
 
 
 Finally, to run the development server:
 ```
-$ grunt server
+$ grunt server:dev
 ```
 
 
@@ -88,6 +88,16 @@ $ ./bin/git-reinit.sh
 For example: `$ ./bin/change-project-name.sh wibble` will change your
 project and its clojure modules to be called 'wibble' rather than the
 default 'cljang'.
+
+
+## Testing
+
+Run the [protractor](https://github.com/angular/protractor) end-to-end tests:
+```
+$ grunt test:e2e
+```
+
+This will run the tests against the currently running server.
 
 
 ## Future
