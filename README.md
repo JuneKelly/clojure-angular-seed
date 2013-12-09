@@ -78,6 +78,12 @@ change the name of the project by running:
 $ ./bin/change-project-name.sh <name>
 ```
 
+You can also blow away the existing git repository (which would just point
+to this repo) and start fresh with:
+```
+$ ./bin/git-reinit.sh
+```
+
 
 For example: `$ ./bin/change-project-name.sh wibble` will change your
 project and its clojure modules to be called 'wibble' rather than the
