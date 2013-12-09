@@ -96,8 +96,25 @@ Run the [protractor](https://github.com/angular/protractor) end-to-end tests:
 ```
 $ grunt test:e2e
 ```
-
 This will run the tests against the currently running server.
+
+
+Run the clojure tests of the web service:
+```
+$ grunt test:ring
+```
+
+
+Or, run all tests in sequence:
+```
+$ grunt test:all
+```
+
+
+Note, that as the protractor tests are run against the currently running
+server, you may wish to set up a separate grunt task to run the server with
+the 'testing' profile (perhaps you'd like to use a different database for
+testing). Left as an exercise for the reader ;)
 
 
 ## Future
