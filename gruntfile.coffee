@@ -27,6 +27,8 @@ module.exports = (grunt) ->
     exec:
       server:
         cmd: "lein with-profile dev ring server-headless"
+      leintest:
+        cmd: "lein with-profile testing test"
 
     coffee:
       compile:
@@ -102,6 +104,15 @@ module.exports = (grunt) ->
     "parallel:server"
   ]
 
+  grunt.registerTask "test:all", [
+    "test:e2e",
+    "test:ring"
+  ]
+
   grunt.registerTask "test:e2e", [
     "protractor:manual"
+  ]
+
+  grunt.registerTask "test:ring", [
+    "exec:leintest"
   ]
