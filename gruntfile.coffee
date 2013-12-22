@@ -29,6 +29,8 @@ module.exports = (grunt) ->
         cmd: "lein with-profile dev ring server-headless"
       leintest:
         cmd: "lein with-profile testing test"
+      build:
+        cmd: "lein with-profile production ring uberjar"
 
     coffee:
       compile:
@@ -102,6 +104,16 @@ module.exports = (grunt) ->
     "copy:images"
     "coffee"
     "parallel:server"
+  ]
+
+  grunt.registerTask "build", [
+    "compass"
+    "copy:views"
+    "copy:bower"
+    "copy:fonts"
+    "copy:images"
+    "coffee"
+    "exec:build"
   ]
 
   grunt.registerTask "test:all", [
