@@ -7,8 +7,8 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <title>cljang</title>
-      {% style "vendor/sass-bootstrap/dist/css/bootstrap.min.css" type="text/css" %}
-      {% style "/css/main.css" %}
+      {% style "/static/vendor/sass-bootstrap/dist/css/bootstrap.min.css" type="text/css" %}
+      {% style "/static/css/main.css" %}
     </head>
 
     <body ng-app="cljangApp">
@@ -37,17 +37,17 @@
 
       <div id="main-content" class="container" ng-view=""></div>
 
-      {% script "/vendor/angular/angular.min.js" %}
-      {% script "/vendor/angular-resource/angular-resource.min.js" %}
-      {% script "/vendor/angular-cookies/angular-cookies.min.js" %}
-      {% script "/vendor/angular-sanitize/angular-sanitize.min.js" %}
-      {% script "/vendor/angular-route/angular-route.min.js" %}
-      {% script "/vendor/angular-camera/dist/angular-camera.min.js" %}
-      {% script "/vendor/jquery/jquery.min.js" %}
-      {% script "/vendor/lodash/dist/lodash.min.js" %}
-      {% script "/vendor/sass-bootstrap/dist/js/bootstrap.min.js" %}
+      {% script "/static/vendor/angular/angular.min.js" %}
+      {% script "/static/vendor/angular-resource/angular-resource.min.js" %}
+      {% script "/static/vendor/angular-cookies/angular-cookies.min.js" %}
+      {% script "/static/vendor/angular-sanitize/angular-sanitize.min.js" %}
+      {% script "/static/vendor/angular-route/angular-route.min.js" %}
+      {% script "/static/vendor/angular-camera/dist/angular-camera.min.js" %}
+      {% script "/static/vendor/jquery/jquery.min.js" %}
+      {% script "/static/vendor/lodash/dist/lodash.min.js" %}
+      {% script "/static/vendor/sass-bootstrap/dist/js/bootstrap.min.js" %}
 
-      {% script "/js/app.js" %}
+      {% script "/static/js/app.js" %}
 
       <script type="text/javascript">
           var context = "{{servlet-context}}";

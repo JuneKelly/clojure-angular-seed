@@ -35,7 +35,7 @@ module.exports = (grunt) ->
     coffee:
       compile:
         files:
-          "resources/public/js/app.js": [
+          "resources/public/static/js/app.js": [
             "resources/scripts/*.coffee"
             "resources/scripts/controllers/*.coffee"
           ]
@@ -44,29 +44,29 @@ module.exports = (grunt) ->
       views:
         expand: true
         cwd: "resources/views"
-        dest: "resources/public/views/"
+        dest: "resources/public/static/views/"
         src: "*.html"
       bower:
         expand: true
         cwd: "resources/bower_components"
-        dest: "resources/public/vendor/"
+        dest: "resources/public/static/vendor/"
         src: "**/*"
       fonts:
         expand: true
         cwd: "resources/fonts"
-        dest: "resources/public/fonts"
+        dest: "resources/public/static/fonts"
         src: "**/*"
       images:
         expand: true
         cwd: "resources/images"
-        dest: "resources/public/img"
+        dest: "resources/public/static/img"
         src: "**/*"
 
     compass:
       dist:
         options:
           sassDir: "resources/styles"
-          cssDir:  "resources/public/css"
+          cssDir:  "resources/public/static/css"
 
     parallel:
       server:
