@@ -9,21 +9,53 @@
 
     <body ng-app="cljangApp">
 
-      <div class="container" ng-view=""></div>
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ng-href="/#/">cljang</a>
+          </div>
+          <div class="navbar-collapse collapse" id="main-menu">
+            <div class="btn-group pull-right">
+              <ul class="nav navbar-nav">
+                <li><a ng-href="/#/">Home</a></li>
+                <li class="divider"></li>
+                <li><a ng-href="/#/about">About</a></li>
+                <li class="divider"></li>
+                <li><a ng-href="/#/donate">Donate</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {% script "vendor/angular/angular.js" %}
-      {% script "vendor/sass-bootstrap/dist/js/bootstrap.min.js" %}
-      {% script "vendor/angular-resource/angular-resource.js" %}
-      {% script "vendor/angular-cookies/angular-cookies.js" %}
-      {% script "vendor/angular-sanitize/angular-sanitize.js" %}
-      {% script "vendor/angular-route/angular-route.js" %}
-      {% script "vendor/jquery/jquery.min.js" %}
-      {% script "vendor/lodash/dist/lodash.min.js" %}
+      <div id="main-content" class="container" ng-view=""></div>
+
+      {% script "/vendor/angular/angular.min.js" %}
+      {% script "/vendor/angular-resource/angular-resource.min.js" %}
+      {% script "/vendor/angular-cookies/angular-cookies.min.js" %}
+      {% script "/vendor/angular-sanitize/angular-sanitize.min.js" %}
+      {% script "/vendor/angular-route/angular-route.min.js" %}
+      {% script "/vendor/angular-camera/dist/angular-camera.min.js" %}
+      {% script "/vendor/jquery/jquery.min.js" %}
+      {% script "/vendor/lodash/dist/lodash.min.js" %}
+      {% script "/vendor/sass-bootstrap/dist/js/bootstrap.min.js" %}
 
       {% script "/js/app.js" %}
+
       <script type="text/javascript">
           var context = "{{servlet-context}}";
       </script>
+      <div class="container">
+        <div class="footer">
+          <p>♥ from <a href="http://00null.net">00null</a></p>
+        </div>
+      </div>
+    </body>
     </body>
 </html>
 

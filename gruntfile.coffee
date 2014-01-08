@@ -13,7 +13,7 @@ module.exports = (grunt) ->
           liveReload: true
       styles:
         files: ["resources/styles/*.sass"]
-        tasks: "newer:compass"
+        tasks: "compass"
       views:
         files: ["resources/views/*.html"]
         tasks: "newer:copy:views"
