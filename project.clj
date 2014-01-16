@@ -1,4 +1,4 @@
-(defproject cljang "0.1.6"
+(defproject cljang "0.1.7"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
 
