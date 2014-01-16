@@ -1,5 +1,6 @@
 (ns cljang.util
   (:require [noir.io :as io]
+            [clj-time.core :as time]
             [markdown.core :as md]))
 
 
@@ -14,7 +15,7 @@
 (defn datetime
   "Shortcut for current datetime"
   []
-  (new java.util.Date))
+  (time/now))
 
 
 (defn uuid

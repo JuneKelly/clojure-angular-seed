@@ -12,3 +12,4 @@ pom.xml
 resources/public
 resources/bower_components
 .sass-cache
+.nrepl-port

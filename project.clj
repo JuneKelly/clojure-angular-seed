@@ -12,6 +12,7 @@
                  [com.taoensso/tower "2.0.1"]
                  [markdown-clj "0.9.35"]
                  [liberator "0.10.0"]
+                 [clj-time "0.6.0"]
                  [environ "0.4.0"]]
 
   :aot :all
