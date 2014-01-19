@@ -43,9 +43,9 @@ You will also need to have [nodejs](http://nodejs.org) and
 
 ## Running
 
-To set up the project, install grunt, coffeescript and bower:
+To set up the project, install grunt-cli if you haven't already:
 ```
-$ npm install -g grunt-cli bower coffee-script
+$ npm install -g grunt-cli
 ```
 depending on how you installed nodejs, you may need root permissions for
 the above command. Subsequent commands should not be run with root
