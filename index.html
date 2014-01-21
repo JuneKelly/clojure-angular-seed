@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Clojure-angular-seed by ShaneKilkelly</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Clojure-angular-seed</h1>
+        <h2>AngularJS in the front, Clojure in the back.</h2>
+        <a href="https://github.com/ShaneKilkelly/clojure-angular-seed" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="clojure-angular-seed" class="anchor" href="#clojure-angular-seed"><span class="octicon octicon-link"></span></a>clojure-angular-seed</h1>
+
+<p>A seed project for getting started fast with Clojure and AngularJS.</p>
+
+<h2>
+<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What?</h2>
+
+<p>A quick and easy way to get off the ground with a Clojure and AngularJS.
+This project provides a minimal Clojure web server which serves up a
+single-page AngularJS application and provides the beginnings of a RESTful
+backend API. It also uses bower to manage front-end dependencies and grunt
+to orchestrate coffee-script and sass compilation, copying files around,
+starting the dev server and watching for changes to source files.</p>
+
+<h2>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h2>
+
+<p>Because it takes a while to get up and running with a
+Clojure/Angular/CoffeeScript/Sass app in the first place, and that's before
+you've even started to build the actual functionality of your cool new app.
+This repo provides a minimal setup useful for getting straight to work
+rather than spending two hours just getting to square one.</p>
+
+<h2>
+<a name="how" class="anchor" href="#how"><span class="octicon octicon-link"></span></a>How?</h2>
+
+<p>This project was set up by first generating a bare-bones
+<a href="luminusweb.net">luminus</a> app, then generating <a href="yeoman.io">yeoman</a> angular
+app and selectivly moving the good parts of the angular app over to the
+clojure project. The gruntfile was built from scratch to provide only the
+functionality that was needed to get the basic app working, consider it a
+base from which to start work rather than a finished 'framework'.</p>
+
+<h2>
+<a name="prerequisites" class="anchor" href="#prerequisites"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
+
+<p>You will need <a href="https://github.com/technomancy/leiningen">Leiningen</a> 2.0 or above installed.</p>
+
+<p>You will also need to have <a href="http://nodejs.org">nodejs</a> and
+<a href="http://ruby-lang.org">ruby</a> installed.</p>
+
+<h2>
+<a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h2>
+
+<p>To set up the project, install grunt-cli if you haven't already:</p>
+
+<pre><code>$ npm install -g grunt-cli
+</code></pre>
+
+<p>depending on how you installed nodejs, you may need root permissions for
+the above command. Subsequent commands should not be run with root
+permissions.</p>
+
+<p>Install the Sass ruby gem:</p>
+
+<pre><code>$ gem install sass
+</code></pre>
+
+<p>Then run the bootstrapper script, which will install npm and bower
+packages, and also install the webdriver binaries needed to run the
+protractor tests:</p>
+
+<pre><code>$ ./bin/bootstrap.sh
+</code></pre>
+
+<p>Finally, to run the development server:</p>
+
+<pre><code>$ grunt server
+</code></pre>
+
+<p>To make the process of starting your new project easier, you can instantly
+change the name of the project by running:</p>
+
+<pre><code>$ ./bin/change-project-name.sh &lt;name&gt;
+</code></pre>
+
+<p>You can also blow away the existing git repository (which would just point
+to this repo) and start fresh with:</p>
+
+<pre><code>$ ./bin/git-reinit.sh
+</code></pre>
+
+<p>For example: <code>$ ./bin/change-project-name.sh wibble</code> will change your
+project and its clojure modules to be called 'wibble' rather than the
+default 'cljang'.</p>
+
+<h2>
+<a name="testing" class="anchor" href="#testing"><span class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>Run the <a href="https://github.com/angular/protractor">protractor</a> end-to-end tests:</p>
+
+<pre><code>$ grunt test:e2e
+</code></pre>
+
+<p>This will run the tests against the currently running server.</p>
+
+<p>Run the clojure tests of the web service:</p>
+
+<pre><code>$ grunt test:ring
+</code></pre>
+
+<p>Or, run all tests in sequence:</p>
+
+<pre><code>$ grunt test:all
+</code></pre>
+
+<p>Note, that as the protractor tests are run against the currently running
+server, you may wish to set up a separate grunt task to run the server with
+the 'testing' profile (perhaps you'd like to use a different database for
+testing). Left as an exercise for the reader ;)</p>
+
+<h2>
+<a name="future" class="anchor" href="#future"><span class="octicon octicon-link"></span></a>Future</h2>
+
+<p>In future, expect to see:</p>
+
+<ul>
+<li>tests, both for the angular frontend and for the clojure api</li>
+<li>easy deployment/packaging</li>
+<li>other tiny improvements</li>
+<li>relentless yak shaving</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright © 2013 Shane Kilkelly, <a href="opensource.org/licenses/MIT">MIT License</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/ShaneKilkelly/clojure-angular-seed/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ShaneKilkelly/clojure-angular-seed/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/ShaneKilkelly/clojure-angular-seed"></a> is maintained by <a href="https://github.com/ShaneKilkelly">ShaneKilkelly</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
