@@ -1,6 +1,16 @@
+# THIS PROJECT IS DEPRECATED
+
+We've moved this project to a leiningen template:
+(lein-angular)[http://github.com/ShaneKilkelly/lein-angular-template].
+You should use that instead, look, it's easy:
+
+`$ lein new angular <project-name>`
+
+
 # clojure-angular-seed
 
 A seed project for getting started fast with Clojure and AngularJS.
+
 
 
 ## What?
